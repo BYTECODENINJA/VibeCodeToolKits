@@ -132,37 +132,43 @@ Team alignment: Non-technical stakeholders can understand relationships without 
 
 ### C. Mermaid ERD Syntax Example
 
+```mermaid
 erDiagram
-USER ||--o{ ALERT : creates
-USER ||--o{ USER_APP : connects
-APP ||--o{ USER_APP : connects
-ALERT {
-UUID id PK
-UUID userId FK
-string title
-string description
-enum priority
-enum status
-timestamp createdAt
-}
-USER {
-UUID id PK
-string email
-string phoneNumber
-string name
-enum authProvider
-timestamp lastLoginAt
-}
-APP {
-UUID id PK
-string name
-string iconUrl
-boolean isConnected
-}
-USER_APP {
-UUID id PK
-UUID userId FK
-UUID appId FK
-string accessToken
-timestamp connectedAt
-}
+    USER ||--o{ ALERT : "creates"
+    USER ||--o{ USER_APP : "connects"
+    APP ||--o{ USER_APP : "connects"
+
+    USER {
+        UUID id PK
+        string email
+        string phoneNumber
+        string name
+        enum authProvider
+        timestamp lastLoginAt
+    }
+
+    ALERT {
+        UUID id PK
+        UUID userId FK
+        string title
+        string description
+        enum priority
+        enum status
+        timestamp createdAt
+    }
+
+    APP {
+        UUID id PK
+        string name
+        string iconUrl
+        boolean isConnected
+    }
+
+    USER_APP {
+        UUID id PK
+        UUID userId FK
+        UUID appId FK
+        string accessToken
+        timestamp connectedAt
+    }
+```
