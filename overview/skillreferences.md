@@ -114,7 +114,7 @@ Here is how the Skills Reference fits into your complete documentation suite:
 | **Backend Schema** | *What data is stored and how it relates* (tables, fields, relationships). |
 | **TDD (Technical Design)** | *How the system works* (architecture, APIs, infrastructure). |
 | **Skills Reference** | *What tools and skills are available* to the AI agent. |
-| **References.md** | External context (API docs, ORM docs, book references). |
+| **Context Library** | External context (API docs, ORM docs, book references). |
 | **Definition of Done** | The final checklist for verifying everything works. |
 
 ---

@@ -225,7 +225,7 @@ erDiagram
 | **Design Brief (UI/UX)** | *How it looks and feels* (colors, fonts, spacing, brand). | Designers, Frontend Devs | After AppFlow | Color tokens, typography, component styles |
 | **Backend Schema** | *What data is stored and how it relates* (tables, fields, relationships). | Backend Devs, DB Admins, AI | Alongside TTD | ERD, table definitions, indexes |
 | **TDD (Technical Design)** | *How the system works* (architecture, APIs, infrastructure, services). | Backend/Fullstack Devs, Architects | Alongside Schema | API specs, service layers, deployment plans |
-| **References.md** | External context (API docs, ORM docs, book references). | Everyone | Before coding | Links to external docs |
+| **Context Library** | External context (API docs, ORM docs, book references). | Everyone | Before coding | Links to external docs |
 
 Key insight: The Backend Schema and TDD are written in parallel. The Schema defines the data layer, while the TDD defines everything around it (APIs, services, real-time, caching). They are inseparable.
 
@@ -339,7 +339,7 @@ Here is how the Backend Schema completes your documentation suite for vibe codin
 | **Design Brief** | *How it looks and feels* (visual identity, brand, UI tokens). |
 | **Backend Schema** | *What data is stored and how it relates* (tables, fields, relationships, indexes). |
 | **TDD (Technical Design)** | *How the system works* (architecture, APIs, infrastructure, services). |
-| **References.md** | External context (ORM docs, API references, books). |
+| **Context Library** | External context (ORM docs, API references, books). |
 | **Definition of Done** | The final checklist for verifying data integrity and model completeness. |
 
 ---

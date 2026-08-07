@@ -65,12 +65,10 @@ In **AI-assisted ("vibe") coding**, the Context Library is the **AI's reference 
 | **TDD** | *How* the system works (architecture, APIs). | Active output | Evolves with project. |
 | **Implementation Summary** | *What was built* (final report). | Active output | Completed at project end. |
 | **Skills Reference** | *What tools are available* to the agent. | Active index | Updated when tools change. |
-| **References.md** | *Index of links* to external resources. | Active index | Updated when references change. |
 | **Context Library** | *The actual external source materials* themselves. | **Passive input** | Mostly static; updated when new source materials arrive. |
 
 **Key Distinction**:
-- `References.md` is an **index**—it says *"Here are the links and what they are."*
-- The **Context Library** is the **vault**—it contains the actual images, PDFs, JSON files, and assets referenced by the index.
+- The **Context Library** is the **vault**—it contains the actual images, PDFs, JSON files, and assets referenced by the project.
 
 ---
 
@@ -116,7 +114,6 @@ context/                         # Root of the Context Library
 | :--- | :--- |
 | **Keep it organized** | Use clear folders and file names so agents (and humans) can find what they need quickly. |
 | **Version large files** | For large PDFs or images, use version control (Git LFS or a separate asset store). |
-| **Update References.md** | Whenever you add a new file to the Context Library, update the `References.md` index. |
 | **Don't duplicate active docs** | The Context Library is for *passive input* only. Do not store PRDs, TDDs, or Summaries here—they belong elsewhere (e.g., `delivery/`). |
 | **Use relative paths** | References in your prompts should point to the Context Library using relative paths (e.g., `context/design-assets/ui-mockups/login-screen.png`). |
 | **Keep it accessible** | Place the Context Library at the root of your project or in a well-known location (e.g., `agentAssets/context/`). |
@@ -138,9 +135,8 @@ When the agent needs to reference an external service or design detail:
 
 ### 7.3. During Handoff
 If a new agent joins the project:
-- The agent reads the `References.md` to see what's available.
-- It browses the Context Library folders to understand the full landscape of source materials.
-- It gains context without requiring the user to re-upload or re-explain every asset.
+1. It browses the Context Library folders to understand the full landscape of source materials.
+2. It gains context without requiring the user to re-upload or re-explain every asset.
 
 ### 7.4. During Verification
 When the agent writes the Implementation Summary:
@@ -154,7 +150,6 @@ When the agent writes the Implementation Summary:
 | Document | Purpose | Role in the Agent Workflow |
 | :--- | :--- | :--- |
 | **Context Library** | Provides **source materials** (images, PDFs, API specs, brand assets). | **Input** – What the agent consumes to understand the project. |
-| **References.md** | Indexes the Context Library and links to external online resources. | **Catalog** – Helps the agent navigate the Library. |
 | **PRD** | Defines *what* to build. | **Plan** – Informs the agent's output. |
 | **AppFlow** | Defines *where* users go. | **Plan** – Informs the agent's output. |
 | **Design Brief** | Defines *how it looks*. | **Plan** – Informs the agent's output (often derived from the Context Library). |
@@ -174,7 +169,6 @@ When the agent writes the Implementation Summary:
 | **Key Audience** | AI Agents (primary), Developers, Designers. |
 | **Content Type** | Passive input: images, PDFs, JSON/OpenAPI files, brand assets, research. |
 | **Lifecycle** | Mostly static; updated when new source materials are added. |
-| **Relationship to References.md** | The Context Library is the **vault**; `References.md` is the **catalog**. |
 | **Vibe-Coding Value** | Prevents AI hallucinations, reduces token waste, accelerates onboarding, and provides a single source of truth for external information. |
 
 > A well-organized Context Library ensures that every AI agent working on your project—whether the original or a newcomer—has instant access to the exact same reference materials. This eliminates guesswork, enforces consistency, and dramatically improves the quality of AI-generated outputs.

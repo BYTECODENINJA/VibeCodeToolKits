@@ -22,7 +22,7 @@ In the era of AI-assisted development, documentation serves as the **master prom
 │   ├── ImplementationSummary.md     # Post-implementation report and agent memory
 │   └── implementation-checklist.md  # Step-by-step task tracking
 ├── legal/
-│   └── LegalAndEthics.md.md         # Guidelines for ethical AI usage
+│   └── LegalAndEthics.md           # Guidelines for ethical AI usage
 ├── overview/
 │   ├── PRD.md                       # Product Requirements Document
 │   ├── TDD.md                       # Technical Design Document
@@ -30,8 +30,8 @@ In the era of AI-assisted development, documentation serves as the **master prom
 │   ├── backendschema.md             # Data models and relationships
 │   ├── designbrief.md               # Visual identity and UI/UX guidelines
 │   └── skillreferences.md           # Catalog of AI skills and tools
-├── refferences/
-│   └── ContextLibrary.md            # External API docs and technical references
+├── references/
+│   └── ContextLibrary.md            # Centralized reference vault
 └── README.md                        # This document
 ```
 
@@ -47,15 +47,26 @@ In the era of AI-assisted development, documentation serves as the **master prom
 ### 2. Technical Design
 *   **[TDD (Technical Design Document)](./overview/TDD.md)**: The engineering blueprint. Covers architecture, tech stack, and system boundaries.
 *   **[Backend Schema](./overview/backendschema.md)**: Detailed definition of data entities, relationships, and constraints.
-*   **[Context Library](./refferences/ContextLibrary.md)**: A repository of external documentation (e.g., API docs, library manuals) that the AI needs to reference.
+*   **[Context Library](./references/ContextLibrary.md)**: A centralized vault for all external source materials (API specs, brand assets, research) that informs the project.
 
 ### 3. AI Agent Integration
 *   **[Skills Reference](./overview/skillreferences.md)**: Defines the "toolbelt" available to the AI agent—specific commands, API integrations, and specialized skills it can invoke.
-*   **[Legal & Ethics](./legal/LegalAndEthics.md.md)**: Guidelines to ensure the AI's output complies with safety, privacy, and ethical standards.
+*   **[Legal & Ethics](./legal/LegalAndEthics.md)**: Guidelines to ensure the AI's output complies with safety, privacy, and ethical standards.
 
 ### 4. Implementation & Handoff
 *   **[Implementation Checklist](./feature-report/implementation-checklist.md)**: A living task list used to track progress and maintain focus during development.
 *   **[Implementation Summary](./feature-report/ImplementationSummary.md)**: **The most critical document for agent memory.** It records what was actually built, technical decisions made, and serves as the "handoff" document when switching between AI agents or sessions.
+
+---
+
+## 🤝 Contributing
+
+I welcome contributions to improve this starter kit! Whether it's adding new templates, refining existing ones, or improving the documentation, your help is appreciated.
+
+1.  **Fork** the repository.
+2.  **Create a new branch** for your feature or fix.
+3.  **Submit a Pull Request** with a clear description of your changes.
+4.  Ensure your templates follow the "vibe-coding" philosophy of providing structured context for AI.
 
 ---
 
@@ -69,6 +80,6 @@ In the era of AI-assisted development, documentation serves as the **master prom
 
 ---
 
-## 🧠 Why "Vibe-Coding"?
+## 🧠 Why this Kit?
 
 Documentation in this kit isn't just for humans—it's **structured context for AI**. By providing clear boundaries and explicit instructions, you reduce AI hallucinations, minimize token waste, and ensure the code generated aligns perfectly with your technical and product goals.
